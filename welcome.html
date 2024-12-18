@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thank You Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+       /* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e3fdfd, #ffe6fa);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for the message */
+.thank-you-container {
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Thumbs-up Icon */
+.thank-you-icon {
+    font-size: 5em; /* Big icon size */
+    color: #4CAF50;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: dropIn 1s ease-out forwards; /* Same animation as the text */
+}
+
+/* Big Heading */
+.thank-you-text {
+    font-size: 3em;
+    font-weight: bold;
+    color: #4CAF50;
+    opacity: 0;
+    animation: dropIn 1s ease-out forwards;
+    animation-delay: 0.2s; /* Slight delay after the icon */
+}
+
+/* Subtitle Message */
+.thank-you-message {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+/* Drop-in animation */
+@keyframes dropIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation for the subtitle */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+    </style>
+        <script src="https://kit.fontawesome.com/ce9e1211ca.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="thank-you-container">
+            <i class="fas fa-thumbs-up thank-you-icon"></i>
+            <h1 class="thank-you-text">Thank You!</h1>
+            <p class="thank-you-message">Your form has been submitted
+                successfully.</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

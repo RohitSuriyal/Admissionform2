@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ce9e1211ca.js"
+      crossorigin="anonymous"></script>
+    <!-- //this os for the select2 -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css"
+      rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <title>Enquiry Page</title>
+    <style>
+      .merri {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+      .font1{
+        font-size:1.2rem;
+      }
+      /* #002D62 */
+      .bgblue{
+        background-color:#002D62;
+      }
+      .bgalice{
+        background-color: #F0F8FF;
+      }
+      .bgblueshade{
+        background-color: rgba(108, 180, 238, 0.5);
+      }
+      .bold{
+        font-weight:bold;
+      }
+      .bluecolor{
+        color:#6CB4EE;
+      }
+      .white{
+      color:white;
+      }
+      .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.black{
+  color:black
+}
+.bg-container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            padding-top:9%;
+            padding-bottom:10%;
+            justify-content: center;
+              
+           
+        }
+
+        .bg-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./pexels-pixabay-301926.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(50%); /* Optional: dim the background */
+            z-index: -1;
+        }
+        .radius{
+          border-radius:15px;
+        }
+        .footertext{
+          font-size: 0.9rem;
+        }
+        .text-animation {
+  animation: colorChange 5s infinite alternate;
+}
+.font2{
+  font-size:1.1rem;
+}
+.oswald{
+  
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    height: 38px;
+}
+
+
+.form-control {
+    max-width: 100%; /* Adjust the width as needed */
+}
+.required {
+    color: red;
+    font-weight: bold;
+}
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  33% {
+    color: violet;
+  }
+  66% {
+    color: green;
+  }
+  100% {
+    color: red;
+  }
+}
+        @media screen and (max-width: 600px) {
+                 .formwidth{
+                  width:100%!important;
+                 }
+                 .displaynone{
+  display:none;
+}
+.center{
+  text-align: center!important;
+}
+.widthfull{
+  width:100%!important;
+}
+
+
+}
+
+
+
+    </style>
+  </head>
+  <body class="bgalice">
+    <div class="container-fluid bgblue fixed-header displaynone  ">
+      <div class="container  ">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-3 font1 py-3 bgblue bold white merri">
+            ADMISSION 2025-26
+          </div>
+          <div class="col-md-3 font1 py-3 bgblue bold white merri">
+            <i class="fa-solid fa-phone"
+              style="color: #ffffff;"></i>+91-9201591375
+
+          </div>
+          <div class="col-md-3 font1 py-3 bgblue bold white merri">
+            <i class="fa-solid fa-envelope" style="color: #fafafa;"></i>
+            Admission@itmglobal.in
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="bg-container white">
+      <div class="row mx-0">
+        <div class="col-md-6  white d-flex flex-column  p-2 ">
+
+          <div
+            class=" mb-3 w-100  white  font1  radius px-md-3 ms-md-5 bgblueshade"
+            data-aos="fade-right"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="1000">
+            <h1 class="bold text-start center merri py-3 ">
+              Instilling Inclusivity,
+              </h1 class="bold">
+              <h1 class="bold text-start center merri py-1"> Building
+                Future</h1>
+            </div>
+
+            <div data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="1000"
+              class="text-start w-100   px-3 radius py-3  ms-md-5 bgblueshade">
+              <p class="font2 merri py-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam
+                maxime sit, asperiores aspernatur perferendis fugiat
+                reprehenderit
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at
+                maxime officiis eum tempora similique error fuga, veniam eveniet
+                officia!
+              </p>
+
+            </div>
+            <div data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="1000"
+              class="text-start w-25 widthfull bg-white px-3 ms-md-5 py-2 rounded my-3 px-md-3">
+              <span class="text-animation bold "
+                class="font2">Admission 2025-26</span>
+            </div>
+
+          </div>
+          <div
+            class="col-md-6 white d-flex justify-content-center">
+            <form data-aos="fade-left"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="1000" name="submit-to-google-sheet"
+              class="  p-5 bgblue radius formwidth "
+              style="width:55%">
+              <h2 class="bold white text-center merri">Admissions open for
+                2025-2026</h2>
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="mb-1 bold">Parent's Name <span
+                      class="required">*</span></label>
+                  <input class="form-control" name="Parents"
+                    placeholder="Parent's name" required>
+
+                </div>
+
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label class="mb-1 bold oswald">Student's Name <span
+                      class="required">*</span></label>
+                  <input class="form-control" name="Students"
+                    placeholder="Student's Name" required>
+
+                </div>
+
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label class="mb-1 bold oswald"> Phone <span
+                      class="required">*</span></label>
+                  <input type="number" id="parentsmobile" class="form-control"
+                    name="Phone" placeholder="Enter Phone Number"
+                    maxlength="9" id="whatsappInput" required>
+
+                </div>
+
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label class="mb-1 bold oswald">Class For Admission</label>
+                  <select class="form-control" name="class" style="color:grey">
+                    <option selected>Select the Class</option>
+                    <!-- Pre-School -->
+                    <option value="Pre-Nursery">Pre-Nursery</option>
+                    <option value="Nursery">Nursery</option>
+                    <option value="Lower Kindergarten (LKG)">Lower Kindergarten
+                      (LKG)</option>
+                    <option value="Upper Kindergarten (UKG)">Upper Kindergarten
+                      (UKG)</option>
+
+                    <!-- Primary School -->
+                    <option value="Class I">Class I</option>
+                    <option value="Class II">Class II</option>
+                    <option value="Class III">Class III</option>
+                    <option value="Class IV">Class IV</option>
+                    <option value="Class V">Class V</option>
+
+                    <!-- Middle School -->
+                    <option value="Class VI">Class VI</option>
+                    <option value="Class VII">Class VII</option>
+                    <option value="Class VIII">Class VIII</option>
+
+                    <!-- High School -->
+                    <option value="Class IX">Class IX</option>
+                    <option value="Class X">Class X</option>
+
+                    <!-- Senior Secondary -->
+                    <option value="Class XI">Class XI</option>
+                    <option value="Class XII">Class XII</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label class="mb-1 bold oswald">City</label>
+                  <input class="form-control" name="city" placeholder="City">
+
+                </div>
+
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label class="mb-1 bold oswald">Email <span
+                      class="required">*</span></label>
+                  <input class="form-control" name="email"
+                    placeholder="Enter Your Email" required>
+
+                </div>
+
+              </div>
+
+              <div class="d-flex justify-content-center mt-5">
+                <button type="submit"
+                  class="btn btn-success w-50">Submit</button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="bgalice">
+
+        <h1 class="text-center bluecolor my-5 merri bold black">
+          Facilities
+        </h1>
+        <div class="container mb-5 " data-aos="fade-up"
+          data-aos-duration="2000">
+          <div class="row my-2 justify-content-center">
+            <div class="col-md-3 col-sm-6 mb-3">
+              <img src="./facilities/back-to-school-2629361_640.jpg"
+                class="img-fluid rounded" alt="School Image">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+                fugiat, nesciunt sint dicta ducimus omnis commodi nihil
+                reprehenderit, consequuntur nostrum quia laudantium architecto
+                tempore quas consequatur vitae cupiditate amet sequi. Autem
+                illum
+                voluptatem rem eveniet quibusdam repudiandae explicabo quo odio
+                ea. Dolorem tempora esse quibusdam eum ad odio laboriosam animi?
+              </p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <img src="./facilities/pencils-6099511_640.jpg"
+                class="img-fluid rounded" alt="Pencils Image">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+              voluptas accusantium nihil, non quisquam officia perspiciatis
+              doloribus unde modi vitae debitis soluta? In aliquid, magnam
+              consequuntur neque optio repudiandae, assumenda ratione molestias
+              ea, fugit iure doloremque nesciunt officiis dolor corporis quos
+              tempora vel aliquam! Soluta debitis neque consequatur vitae quos!
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <img src="./facilities/people-2557399_640.jpg"
+                class="img-fluid rounded" alt="People Image">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias
+              numquam laborum dolore facilis voluptatem pariatur ex temporibus
+              doloremque corporis dicta repudiandae porro aut nesciunt totam
+              nemo
+              laboriosam, repellendus non explicabo blanditiis? Atque ut
+              sapiente
+              voluptatibus commodi quod illo ea sed voluptatum, autem blanditiis
+              et esse. Ducimus cupiditate quisquam ipsa accusantium!
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <img src="./facilities/people-2557399_640.jpg"
+                class="img-fluid rounded" alt="People Image">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio
+              omnis reiciendis magnam nesciunt deleniti, nobis explicabo
+              consequuntur sapiente ipsa. Itaque veritatis vitae ratione.
+              Praesentium laborum libero esse quidem dolor in perferendis
+              eveniet
+              iusto amet quibusdam vero repellendus, nihil quae asperiores
+              corrupti illo magnam quod exercitationem consequuntur distinctio
+              nulla. Unde, dolorum?
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid bgblue">
+    <div class="container p-5" data-aos="fade-up"
+      data-aos-duration="2000">
+      <h1 class="text-center my-3 white black">Lorem, ipsum dolor.</h1>
+      <p class="white">
+
+        At ITM Global School, the well-being, development, and comfort of
+        students are given utmost priority. The boarding house is
+        thoughtfully designed to provide spaces for relaxation,
+        socialization, and study, Creating a true “Home Away From Home”
+        atmosphere. The residential area is designed to foster Harmonious
+        living, offering the ideal environment for students to thrive both
+        socially and academically. The floor warden resides close to the
+        students thus creating a family environment, and provides loving
+        Supervision and guidance ensuring that students feel supported and
+        cared for during their stay. The Residential area for our boarders
+        is referred to as “The Nest”.
+      </p>
+      <div class="row mt-5">
+
+        <div class="col-md-6 ">
+          <h3 class="white">THE DIFFERENTIATORS
+            YOUR SAFE HAVEN OUR HEARTFELT HOSPITALITY</h3>
+
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+          <li class="white">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit.
+            Ipsum, eligendi.</li>
+        </div>
+        <div class="col-md-6 ">
+          <img src="./facilities/people-2557399_640.jpg"
+            class="img-fluid rounded" alt="People Image">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div>
+    <h1 class="text-center bluecolor my-5 merri bold black">
+      Gallery
+    </h1>
+    <div class="container" data-aos="fade-up"
+      data-aos-duration="2000">
+      <div class="row my-2 justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/back-to-school-2629361_640.jpg"
+            class="img-fluid rounded" alt="School Image">
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/pencils-6099511_640.jpg"
+            class="img-fluid rounded" alt="Pencils Image">
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/people-2557399_640.jpg"
+            class="img-fluid rounded" alt="People Image">
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/people-2557399_640.jpg"
+            class="img-fluid rounded" alt="People Image">
+        </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up"
+      data-aos-duration="2000">
+      <div class="row my-2 justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/back-to-school-2629361_640.jpg"
+            class="img-fluid rounded" alt="School Image">
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/pencils-6099511_640.jpg"
+            class="img-fluid rounded" alt="Pencils Image">
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/people-2557399_640.jpg"
+            class="img-fluid rounded" alt="People Image">
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <img src="./facilities/people-2557399_640.jpg"
+            class="img-fluid rounded" alt="People Image">
+        </div>
+      </div>
+    </div>
+    <div class="container my-5">
+      <h1 class="text-center mb-5 bluecolor merri bold black">
+        Testimonial
+      </h1>
+      <div class="row my-2 justify-content-center" data-aos="fade-up"
+        data-aos-duration="2000">
+        <div class="col-md-3 col-sm-6 mb-3">
+          <iframe
+            width="100%"
+            height="215"
+            src="https://www.youtube.com/embed/4zvvAjj18Dk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <iframe
+            width="100%"
+            height="215"
+            src="https://www.youtube.com/embed/4zvvAjj18Dk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <iframe
+            width="100%"
+            height="215"
+            src="https://www.youtube.com/embed/4zvvAjj18Dk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+          <iframe
+            width="100%"
+            height="215"
+            src="https://www.youtube.com/embed/4zvvAjj18Dk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-dark p-2 " data-aos="fade-up"
+      data-aos-duration="2000">
+      <div class="container">
+        <div
+          class="row  d-flex justify-content-between py-5">
+          <div class="col-md-4 white ">
+            <h4 class="white">About Us</h4>
+            <p class="footertext">
+              ITM Global School was founded in a beautiful lush green
+              picturesque environment of National Highway 75, Turari, Jhansi
+              Road, Gwalior in the year 2014. It is the first school in
+              Gwalior which offers both National and International Curricula.
+              It is administered by SLS Trust, Gwalior and therefore it is a
+              sister concern of ITM Group.
+            </p>
+
+          </div>
+          <div class="col-md-4">
+            <h4 class="white">Contact US</h4>
+            <p class="white footertext">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Beatae, magni neque. Voluptas dolorum accusamus corrupti velit
+              molestias in aliquam, aspernatur sit expedita, ipsa maiores
+              reprehenderit omnis quasi perspiciatis, illo consectetur.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h4 class="white">DISCLAIMER</h4>
+            <p class="white footertext">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              quos cupiditate beatae nulla, soluta facilis blanditiis dolore
+            </p>
+          </div>
+
+        </div>
+        <hr style="border-top: 2px solid #ccc; ">
+        <p class="white mb-0">Copyright @2024 Lorem, ipsum dolor.
+
+        </p>
+      </div>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script>
+       
+
+const parentnumber=document.getElementById('parentsmobile');
+
+parentnumber.addEventListener('input', function() {
+  // Remove any non-numeric characters
+  this.value = this.value.replace(/\D/g, '');
+
+  // Truncate the input to 9 digits
+  if (this.value.length > 10) {
+    this.value = this.value.slice(0, 10);
+  }
+});
+
+//this is the form
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxU9TIa3umm35xDaiqL-JqECO7aYTxSZOEWGZNKqHpYznTRHnTH4IVN1GhyZITHe_0GkA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Show loading alert immediately
+    Swal.fire({
+        title: 'Submitting...',
+        html: 'Please wait while we process your form.',
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        willOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(response => {
+      form.reset();
+         window.location.href = './welcome.html'
+
+    })
+    .catch(error => {
+        // Error in submission
+        Swal.fire({
+            icon: 'error',
+            title: 'Submission Failed',
+            text: 'There was an error submitting your form. Please try again.',
+            confirmButtonText: 'Try Again'
+        });
+
+        console.error('Error!', error.message);
+    });
+});
+
+
+$("#state").select2({
+  tags:false,
+  placeholder:"select the state"
+});
+      </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+  </body>
+</html>
