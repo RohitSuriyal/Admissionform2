@@ -172,7 +172,16 @@
         }
 }
 
+#parentsmobile::-webkit-inner-spin-button,
+    #parentsmobile::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
+    /* For Firefox */
+    #parentsmobile[type="number"] {
+        -moz-appearance: textfield;
+    }
 
     </style>
   </head>
@@ -271,7 +280,7 @@
                       class="required">*</span></label>
                   <input type="number" id="parentsmobile" class="form-control"
                     name="Phone" placeholder="Enter Phone Number"
-                    maxlength="9" id="whatsappInput" required>
+                    maxlength="9" required>
 
                 </div>
 
@@ -317,7 +326,8 @@
               <div class="row mt-3">
                 <div class="col-md-12">
                   <label class="mb-1 bold oswald">City</label>
-                  <input class="form-control" name="city" placeholder="City">
+                  <input class="form-control" name="city" placeholder="City"
+                    required>
 
                 </div>
 
@@ -355,45 +365,61 @@
             <div class="col-md-3 col-sm-6 mb-3">
               <img src="./facilities/sports2.png"
                 class="img-fluid rounded" alt="School Image">
-              
-                <h4 class="py-2">Excellent sports facilities</h4>
-                DPS Kurukshetra offers exceptional sports facilities guided by experienced national-level
-                players. Students receive expert coaching in a nurturing environment, fostering skills, discipline,
-                and sportsmanship. With world-class infrastructure and professional guidance, the school
-                ensures holistic development, empowering young athletes to excel in their chosen sports and
-                achieve their full potential.
-              
+
+              <h4 class="py-2">Excellent sports facilities</h4>
+              DPS Kurukshetra offers exceptional sports facilities guided by
+              experienced national-level
+              players. Students receive expert coaching in a nurturing
+              environment, fostering skills, discipline,
+              and sportsmanship. With world-class infrastructure and
+              professional guidance, the school
+              ensures holistic development, empowering young athletes to excel
+              in their chosen sports and
+              achieve their full potential.
+
             </div>
             <div class="col-md-3 col-sm-6 mb-3">
               <img src="./facilities/DPS.00_00_31_24.Still011.png"
                 class="img-fluid rounded" alt="Pencils Image">
-                <h4 class="py-2">Interactive way of learning</h4>
-                Discover the joy of learning with interactive science and math labs at DPS Kurukshetra! Our
-                state-of-the-art labs ignite curiosity, foster hands-on exploration, and bring concepts to life.
-                Through engaging experiments and practical applications, students develop critical thinking,
-                problem-solving skills, and a deeper understanding of scientific and mathematical principles
-                
+              <h4 class="py-2">Interactive way of learning</h4>
+              Discover the joy of learning with interactive science and math
+              labs at DPS Kurukshetra! Our
+              state-of-the-art labs ignite curiosity, foster hands-on
+              exploration, and bring concepts to life.
+              Through engaging experiments and practical applications, students
+              develop critical thinking,
+              problem-solving skills, and a deeper understanding of scientific
+              and mathematical principles
+
             </div>
             <div class="col-md-3 col-sm-6 mb-3">
               <img src="./facilities/sports.png"
                 class="img-fluid rounded" alt="People Image">
-                <h4 class="py-2">
-                  Building confidence
-                </h4>
-                At DPS Kurukshetra, we focus on nurturing lifelong skills in our students, fostering critical
-                thinking, creativity, and adaptability. Through a balanced curriculum, hands-on activities, and
-                values-based education, we prepare students to thrive in a dynamic world, empowering them to
-                excel academically and personally while embracing a lifelong love for learning.
+              <h4 class="py-2">
+                Building confidence
+              </h4>
+              At DPS Kurukshetra, we focus on nurturing lifelong skills in our
+              students, fostering critical
+              thinking, creativity, and adaptability. Through a balanced
+              curriculum, hands-on activities, and
+              values-based education, we prepare students to thrive in a dynamic
+              world, empowering them to
+              excel academically and personally while embracing a lifelong love
+              for learning.
             </div>
             <div class="col-md-3 col-sm-6 mb-3">
               <img src="./facilities/skills.png"
                 class="img-fluid rounded" alt="People Image">
-                <h4 class="py-2">Focussing on lifelong skills
-                </h4>
-                At DPS Kurukshetra, we focus on nurturing lifelong skills in our students, fostering critical
-                thinking, creativity, and adaptability. Through a balanced curriculum, hands-on activities, and
-                values-based education, we prepare students to thrive in a dynamic world, empowering them to
-                excel academically and personally while embracing a lifelong love for learning.
+              <h4 class="py-2">Focussing on lifelong skills
+              </h4>
+              At DPS Kurukshetra, we focus on nurturing lifelong skills in our
+              students, fostering critical
+              thinking, creativity, and adaptability. Through a balanced
+              curriculum, hands-on activities, and
+              values-based education, we prepare students to thrive in a dynamic
+              world, empowering them to
+              excel academically and personally while embracing a lifelong love
+              for learning.
             </div>
           </div>
         </div>
@@ -466,7 +492,6 @@
     </div>
   </div> -->
 
-
   <div>
     <h1 class="text-center bluecolor my-5 merri bold black">
       Gallery
@@ -493,7 +518,6 @@
       </div>
     </div>
 
-   
     <!-- <div class="container my-5">
       <h1 class="text-center mb-5 bluecolor merri bold black">
         Testimonial
