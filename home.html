@@ -655,6 +655,9 @@ parentnumber.addEventListener('input', function() {
     })
     .then(response => {
       form.reset();
+      window.addEventListener('beforeunload', () => {
+    Swal.close(); // Close any active SweetAlert modal
+});
          window.location.href = './welcome.html'
 
     })
