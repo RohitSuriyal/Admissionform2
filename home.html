@@ -145,7 +145,7 @@
     color: red;
   }
 }
-        @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
                  .formwidth{
                   width:100%!important;
                  }
@@ -170,6 +170,11 @@
               
            
         }
+        .address{
+          font-size:13px!important;
+
+        }
+        
 }
 
 #parentsmobile::-webkit-inner-spin-button,
@@ -217,8 +222,8 @@
             data-aos-anchor="#example-anchor"
             data-aos-offset="500"
             data-aos-duration="1000">
-            <h1 class="bold text-start center merri py-3  ">
-              Delhi Public School,Kurukshetra
+            <h1 class="bold  px-3 merri py-3  ">
+              DPS Kurukshetra
               </h1 class="bold">
               <!-- <h1 class="bold text-start center merri py-1"> </h1> -->
             </div>
@@ -228,7 +233,7 @@
               data-aos-offset="500"
               data-aos-duration="1000"
               class="text-start w-100 widthfull    px-3 radius py-3  bgblueshade">
-              <h2 class=" merri bold py-2">
+              <h2 class=" merri bold py-2 address">
                 Pehowa Rd, near Jyotisar, Kurukshetra
               </h2>
 
@@ -238,8 +243,7 @@
               data-aos-offset="500"
               data-aos-duration="1000"
               class="text-start w-50 widthfull bg-white px-3  py-2 rounded my-3 px-md-3">
-              <span class="text-animation bold "
-                class="font1"> Admission enquiry session 2025-26</span>
+              <span class="text-animation bold address"> Admission Enquiry | session 2025-26</span>
             </div>
 
           </div>
@@ -249,9 +253,9 @@
               data-aos-anchor="#example-anchor"
               data-aos-offset="500"
               data-aos-duration="1000" name="submit-to-google-sheet"
-              class="  p-5 bgblue radius formwidth "
+              class="  p-md-5 p-3 bgblue radius formwidth "
               style="width:77%">
-              <h2 class="bold white text-center merri">Admission Enquiry For 2025-2026</h2>
+              <h2 class="bold white text-center merri py-3">Please fill your details</h2>
               <div class="row">
                 <div class="col-md-12">
                   <label class="mb-1 bold">Parent's Name <span
@@ -288,8 +292,10 @@
               <div class="row mt-3">
                 <div class="col-md-12">
                   <label class="mb-1 bold oswald">Class For Admission</label>
-                  <select class="form-control" name="class" style="color:grey">
-                    <option selected>Select the Class</option>
+                  <span
+                      class="required">*</span>
+                  <select class="form-control" name="class" style="color:grey" required>
+                    <option value="" disabled selected>Select the Class</option>
                     <!-- Pre-School -->
                     <option value="Pre-Nursery">Pre-Nursery</option>
                     <option value="Nursery">Nursery</option>
@@ -325,18 +331,16 @@
               <div class="row mt-3">
                 <div class="col-md-12">
                   <label class="mb-1 bold oswald">City</label>
-                  <input class="form-control" name="city" placeholder="City"
-                    required>
+                  <input class="form-control" name="city" placeholder="City">
 
                 </div>
 
               </div>
               <div class="row mt-3">
                 <div class="col-md-12">
-                  <label class="mb-1 bold oswald">Email <span
-                      class="required">*</span></label>
+                  <label class="mb-1 bold oswald">Email </label>
                   <input class="form-control" name="email"
-                    placeholder="Enter Your Email" required>
+                    placeholder="Enter Your Email">
 
                 </div>
 
